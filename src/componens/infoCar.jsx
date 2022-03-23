@@ -20,7 +20,7 @@ function InfoCar(props, data) {
         <Loader />
       </div>
         <div className='blok-car'>
-        <a href='site-frantsuz-go/firebase-taxi-app' className="name-site">
+        <a href='/site-frantsuz-go/firebase-taxi-app' className="name-site">
             <img className='logo' src={logo}/>
           </a>
           <div className="btn-blok">
