@@ -98,7 +98,7 @@ function Main(props) {
           </a>
           <div className="btn-blok">
             <div className="btn-histori">
-              <a href='/site-frantsuz-go/firebase-taxi-app-info/'>
+              <a href='site-frantsuz-go/firebase-taxi-app-info'>
                 <img className='histori-icon' src={histori}/>
                 <div className='btn-text'>
                   <div className="text-histori">история заказов</div>
