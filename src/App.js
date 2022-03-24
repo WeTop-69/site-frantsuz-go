@@ -10,9 +10,9 @@ function App() {
     <div className="App">
        <BrowserRouter>
         <Routes>
-          <Route path="login" element={<Login/>} />
-          <Route path="site-frantsuz-go/" element={<Main/>} />
-          <Route path="firebase-taxi-app-info" element={<InfoCar/>} />
+          <Route path="/site-frantsuz-go/login" element={<Login/>} />
+          <Route path="/site-frantsuz-go/" element={<Main/>} />
+          <Route path="/site-frantsuz-go/firebase-taxi-app-info" element={<InfoCar/>} />
         </Routes>
       </BrowserRouter>
     </div>
