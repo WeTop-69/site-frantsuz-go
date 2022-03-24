@@ -8,7 +8,7 @@ import { child, get, getDatabase, onValue, ref, set} from "firebase/database";
 function Car5() {
   const [namecar, cinstnam] = useState('');
   const dbRef = getDatabase();
-  const btnInfo2 = ref(dbRef, 'cars/C051AK/carNamber');
+  const btnInfo2 = ref(dbRef, 'cars/C051AK/carNumber');
   onValue(btnInfo2, (snapshot) => {
     const namecar = snapshot.val();
     document.getElementById('namber5').innerHTML = namecar;
@@ -58,7 +58,7 @@ function Car5() {
       nam.className = 'item-block namber text-color';
       document.getElementById('infoCar5').innerHTML = her2;
       set(ref(db, 'cars/C051AK'), {
-        carNamber: "C051AK",
+        carNumber: "C051AK",
         driverName: "Даня",
         free : false,
         model: "Lada Granta жёлтая",
@@ -76,7 +76,7 @@ function Car5() {
       nam.className = 'item-block namber';
       document.getElementById('infoCar5').innerHTML = her2;
       set(ref(db, 'cars/C051AK'), {
-        carNamber: "C051AK",
+        carNumber: "C051AK",
         driverName: "Даня",
         free : true,
         model: "Lada Granta жёлтая",

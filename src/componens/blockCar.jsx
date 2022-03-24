@@ -12,7 +12,7 @@ function BlockCar() {
   });
   const [namecar, cinstnam] = useState('');
   const dbRef = getDatabase();
-  const btnInfo2 = ref(dbRef, 'cars/E347YK/carNamber');
+  const btnInfo2 = ref(dbRef, 'cars/E347YK/carNumber');
   onValue(btnInfo2, (snapshot) => {
     const namecar = snapshot.val();
     document.getElementById('namber').innerHTML = namecar;
@@ -62,7 +62,7 @@ function BlockCar() {
       nam.className = 'item-block namber text-color';
       document.getElementById('infoCar').innerHTML = her2;
       set(ref(db, 'cars/E347YK'), {
-        carNamber: "E347YK",
+        carNumber: "E347YK",
         driverName: "Никита",
         free : false,
         model: "Lada Granta чёрная",
@@ -80,7 +80,7 @@ function BlockCar() {
       nam.className = 'item-block namber';
       document.getElementById('infoCar').innerHTML = her2;
       set(ref(db, 'cars/E347YK'), {
-        carNamber: "E347YK",
+        carNumber: "E347YK",
         driverName: "Никита",
         free : true,
         model: "Lada Granta чёрная",
