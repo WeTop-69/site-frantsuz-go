@@ -83,8 +83,12 @@ function Main(props) {
       mapState5 = false
     }
   }
+  function sayHi() {
+    var bb = document.querySelector('#loader');
+    bb.className = 'loader-position none';
+  }
   var blocBlac = false;
-  function infoBlockCarFree() {
+  function her545() {
     if (blocBlac == false){
       var bb = document.querySelector('#blockBlack');
       bb.className = 'block-black block';
@@ -98,10 +102,6 @@ function Main(props) {
       ibc.className = 'info-bloc-car';
       blocBlac = false
     }
-  }
-  function sayHi() {
-    var bb = document.querySelector('#loader');
-    bb.className = 'loader-position none';
   }
   setTimeout(sayHi, 6000);
   return (
@@ -122,7 +122,7 @@ function Main(props) {
                 </div>
               </a>
             </div>
-            <div onClick={infoBlockCarFree} className="btn-filter">
+            <div onClick={her545} className="btn-filter">
               <img className='filter-icon' src={filter}/>
               <div className='btn-text'></div>
             </div>

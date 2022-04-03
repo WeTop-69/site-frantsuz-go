@@ -1,15 +1,12 @@
-import { ref, onValue, getDatabase } from 'firebase/database';
+import { ref, onValue, getDatabase, get, child } from 'firebase/database';
 import React, { Suspense, useEffect, useState } from 'react'
 import InfoPrase from './InfoPrice';
-
+let  i = []
 let infocar3 = []
-    let i =[]
-
 function IBC() {
-
-    const dbRef =  getDatabase();
+  const dbRef =  getDatabase();
+  const [infocar, setInfo] = useState([])
     const btnInfo2 = ref(dbRef, 'cars');
-    const [infocar, setInfo] = useState(infocar3)
     onValue(btnInfo2, (snapshot) => {
         let infocar2 = snapshot.val()
         let infocar4 = Object.values(infocar2)
@@ -18,16 +15,16 @@ function IBC() {
             i = infocar4
             setTimeout(() => {
                 setInfo(infocar3 = infocar4);
-            }, 1000);
+            }, 5000);
         }
     });
     console.log(infocar)
-    console.log(infocar3)
-  return (
+return(
     <div className='blockCarOf'>
-        {infocar.map(post =>
-        <InfoPrase post={post} key={post.b}/>  
-        )}
+        {
+          infocar.map(post =>
+            <InfoPrase post={post} key={post.b}/>  
+            )}
     </div>
-  )}
+)}
   export default IBC;
