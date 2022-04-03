@@ -7,6 +7,7 @@ import Loader from './loader';
 import MapY from './map';
 import mapIcon from '../image/Group 1025.svg'
 import MapY2 from './map2';
+import IBC from './infoBlockCar';
 
 function Main(props) { 
   let mapState = false
@@ -82,6 +83,22 @@ function Main(props) {
       mapState5 = false
     }
   }
+  var blocBlac = false;
+  function infoBlockCarFree() {
+    if (blocBlac == false){
+      var bb = document.querySelector('#blockBlack');
+      bb.className = 'block-black block';
+      var ibc = document.querySelector('#infoBlocCar');
+      ibc.className = 'info-bloc-car block';
+      blocBlac = true
+    } else{
+      var bb = document.querySelector('#blockBlack');
+      bb.className = 'block-black';
+      var ibc = document.querySelector('#infoBlocCar');
+      ibc.className = 'info-bloc-car';
+      blocBlac = false
+    }
+  }
   function sayHi() {
     var bb = document.querySelector('#loader');
     bb.className = 'loader-position none';
@@ -105,9 +122,9 @@ function Main(props) {
                 </div>
               </a>
             </div>
-            <div className="btn-filter">
+            <div onClick={infoBlockCarFree} className="btn-filter">
               <img className='filter-icon' src={filter}/>
-              <div className='btn-text'>фильтр</div>
+              <div className='btn-text'></div>
             </div>
           </div>
           <div className="border">
@@ -138,6 +155,14 @@ function Main(props) {
         </div>
         <div id='blockBlack' className="block-black"></div>
         <div id='infoBlocCar' className="info-bloc-car">
+          <div className='setting-text'>Настройка машин</div>
+          <div className="settin-block-main">
+            <div className="carNum">Номер</div>
+            <div className="carNam">Модель/Цвет</div>
+            <div className="driveNam">ФИО</div>
+            <div className="settin-item"></div>
+          </div>
+          <IBC/>
         </div>
         <img onClick={mapBtn} className="btn-map" src={mapIcon}/>
         <MapY/>
